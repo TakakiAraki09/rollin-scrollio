@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@takaki_araki09/rollin-scrollio':
-        specifier: ^0.0.6
-        version: 0.0.6(postcss@8.5.3)(typescript@5.8.3)
+        specifier: ^0.0.7
+        version: 0.0.7(postcss@8.5.3)(typescript@5.8.3)
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -296,8 +296,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@takaki_araki09/rollin-scrollio@0.0.6':
-    resolution: {integrity: sha512-YQCp3W8BOoR2mccY1kxcwZM5U5sdMnTGyb8IrLSj9rsxJX03uxqi5ecb91+N21+KAqibmbzR8tucP5+i/xTjrQ==}
+  '@takaki_araki09/rollin-scrollio@0.0.7':
+    resolution: {integrity: sha512-xwHDVpgYLfF/vaBx9/V/qhhrz4Gqx44OQ6mMlAzM9GA0Q/V6REsZlHyCVgpI03qg6UlpV1yjeeJhJYnoDLYhpw==}
 
   '@takumus/cubic-bezier@2.0.0':
     resolution: {integrity: sha512-odYoq0oyfpHN47r5NYcp6NOi341Wneh4fb4TJHWJqkPpzbSg+N0rX5An9Rx4//rXkI1ldsatPRz6nR8YBDCPEA==}
@@ -836,7 +836,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.40.2':
     optional: true
 
-  '@takaki_araki09/rollin-scrollio@0.0.6(postcss@8.5.3)(typescript@5.8.3)':
+  '@takaki_araki09/rollin-scrollio@0.0.7(postcss@8.5.3)(typescript@5.8.3)':
     dependencies:
       '@takumus/cubic-bezier': 2.0.0
       tsup: 8.4.0(postcss@8.5.3)(typescript@5.8.3)
