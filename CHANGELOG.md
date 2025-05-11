@@ -1,5 +1,11 @@
 # @takaki_araki09/rollin-scrollio
 
+## 0.0.4
+
+### Patch Changes
+
+- eb331d1: publish を npm に変更
+
 ## 0.0.3
 
 ### Patch Changes
