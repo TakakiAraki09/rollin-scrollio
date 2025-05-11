@@ -1,5 +1,11 @@
 # @takaki_araki09/rollin-scrollio
 
+## 0.0.6
+
+### Patch Changes
+
+- a9dab4e: 軽微なバグ訂正
+
 ## 0.0.5
 
 ### Patch Changes
