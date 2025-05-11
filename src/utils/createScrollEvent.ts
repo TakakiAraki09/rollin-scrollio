@@ -25,7 +25,7 @@ export const createScrollEvent = (
 			}
 		},
 		{
-			rootMargin: options?.rootMargin ?? "70vh 0%",
+			rootMargin: "70% 0%",
 			threshold: options?.threshold ?? 0.1,
 		},
 	);
