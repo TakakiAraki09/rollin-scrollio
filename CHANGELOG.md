@@ -1,5 +1,11 @@
 # @takaki_araki09/rollin-scrollio
 
+## 0.0.7
+
+### Patch Changes
+
+- 92b5ae9: clamp する部分を訂正
+
 ## 0.0.6
 
 ### Patch Changes
