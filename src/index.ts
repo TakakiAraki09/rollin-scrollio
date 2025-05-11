@@ -16,7 +16,7 @@ function lorringScrollioCore(element: HTMLElement) {
 	const destory = scrollEvent((progress) => {
 		element.style.setProperty(
 			DEFAULT_WAPPER_CSS_VARIABLE,
-			clamp(progress, 0, 1).toString(),
+			clamp(progress, -2, 2).toString(),
 		);
 	});
 
