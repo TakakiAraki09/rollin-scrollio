@@ -1,5 +1,11 @@
 # @takaki_araki09/rollin-scrollio
 
+## 0.0.5
+
+### Patch Changes
+
+- 452b25a: public になっていなかった
+
 ## 0.0.4
 
 ### Patch Changes
