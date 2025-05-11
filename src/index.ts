@@ -1,58 +1,60 @@
 import { createScrollEvent } from "./utils/createScrollEvent";
 import { clamp } from "./utils/math";
 
-
-const DEFUALT_WARPPER_SELECTOR = 'lorring-scriollio';
-const DEFAULT_WAPPER_CSS_VARIABLE = '--lorring-scriollio-progress';
+const DEFUALT_WARPPER_SELECTOR = "lorring-scriollio";
+const DEFAULT_WAPPER_CSS_VARIABLE = "--lorring-scriollio-progress";
 
 interface LorringScriollioOptionAsSelector {
-  selector: string;
+	selector: string;
 }
 interface LorringScriollioOptionAsElement {
-  element: HTMLElement | HTMLElement[];
+	element: HTMLElement | HTMLElement[];
 }
-
 
 function lorringScrollioCore(element: HTMLElement) {
-  const scrollEvent = createScrollEvent(element);
-  const destory = scrollEvent((progress) => {
-    element.style.setProperty(DEFAULT_WAPPER_CSS_VARIABLE, clamp(progress, 0, 1).toString());
-  });
+	const scrollEvent = createScrollEvent(element);
+	const destory = scrollEvent((progress) => {
+		element.style.setProperty(
+			DEFAULT_WAPPER_CSS_VARIABLE,
+			clamp(progress, 0, 1).toString(),
+		);
+	});
 
-  return {
-    destory
-  };
+	return {
+		destory,
+	};
 }
 function getBySelector(selector: string) {
-  return Array.from(document.querySelectorAll(selector))
-    .filter((val): val is HTMLElement => val instanceof HTMLElement);
+	return Array.from(document.querySelectorAll(selector)).filter(
+		(val): val is HTMLElement => val instanceof HTMLElement,
+	);
 }
 
-
-type WrapperRegistOptions = LorringScriollioOptionAsElement | LorringScriollioOptionAsSelector;
+type WrapperRegistOptions =
+	| LorringScriollioOptionAsElement
+	| LorringScriollioOptionAsSelector;
 function wrapperRegist(options?: WrapperRegistOptions) {
-  const contents = (() => {
-    if (options == null) {
-      return getBySelector(DEFUALT_WARPPER_SELECTOR).map(lorringScrollioCore);
-    }
-    if ('selector' in options) {
-      return getBySelector(options.selector).map(lorringScrollioCore)
-    }
-    if ('element' in options) {
-      return Array.isArray(options.element)
-        ? options.element.map(lorringScrollioCore)
-        : [lorringScrollioCore(options.element)];
-    }
-    return [];
-  })();
-  return {
-    elements: contents,
-    progress: () => {
-    },
-    destroy:() => {
-      return contents.map((val) => val.destory());
-    },
-  }
+	const contents = (() => {
+		if (options == null) {
+			return getBySelector(DEFUALT_WARPPER_SELECTOR).map(lorringScrollioCore);
+		}
+		if ("selector" in options) {
+			return getBySelector(options.selector).map(lorringScrollioCore);
+		}
+		if ("element" in options) {
+			return Array.isArray(options.element)
+				? options.element.map(lorringScrollioCore)
+				: [lorringScrollioCore(options.element)];
+		}
+		return [];
+	})();
+	return {
+		elements: contents,
+		progress: () => {},
+		destroy: () => {
+			return contents.map((val) => val.destory());
+		},
+	};
 }
 
 /**
@@ -70,14 +72,13 @@ function wrapperRegist(options?: WrapperRegistOptions) {
  *   number
  **/
 function LorringScriollio(options?: WrapperRegistOptions) {
-  const wrapper = wrapperRegist(options)
-  return {
-    progress: () => {
-    },
-    destroy:() => {
-      wrapper.destroy();
-    },
-  }
+	const wrapper = wrapperRegist(options);
+	return {
+		progress: () => {},
+		destroy: () => {
+			wrapper.destroy();
+		},
+	};
 }
 
 export default LorringScriollio;
