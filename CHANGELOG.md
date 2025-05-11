@@ -1,5 +1,11 @@
 # @takaki_araki09/rollin-scrollio
 
+## 0.0.3
+
+### Patch Changes
+
+- 3648536: ci に build が入っていなかった
+
 ## 0.0.2
 
 ### Patch Changes
