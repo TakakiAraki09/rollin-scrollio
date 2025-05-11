@@ -19,7 +19,7 @@
     "format": "biome format --write ./src/**",
     "lint": "biome lint --write ./src/**",
     "check": "biome check --write ./src/**",
-    "ci:publish": "pnpm publish -r",
+    "ci:publish": "npm publish",
     "build": "tsup"
   },
   "exports": {
