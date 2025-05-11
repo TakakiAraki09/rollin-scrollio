@@ -1,7 +1,7 @@
 import { createScrollEvent } from "./utils/createScrollEvent";
 import { clamp } from "./utils/math";
 
-const DEFUALT_WARPPER_SELECTOR = "lorring-scriollio";
+const DEFUALT_WARPPER_SELECTOR = ".lorring-scriollio";
 const DEFAULT_WAPPER_CSS_VARIABLE = "--lorring-scriollio-progress";
 
 interface LorringScriollioOptionAsSelector {
