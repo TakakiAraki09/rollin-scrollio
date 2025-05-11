@@ -8,10 +8,10 @@ on:
 env:
   CI: true
 
-permissions: write-all
-#  contents: write
-#  pull-requests: write
-#  issues: write
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
 
 jobs:
   version:
@@ -38,7 +38,7 @@ jobs:
         with:
           commit: "chore: update versions"
           title: "chore: update versions"
-          # publish: pnpm ci:publish
+          publish: pnpm ci:publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
