@@ -34,10 +34,10 @@
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
     "@changesets/cli": "^2.29.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "tsup": "^8.4.0"
   },
   "dependencies": {
-    "@takumus/cubic-bezier": "^2.0.0",
-    "tsup": "^8.4.0"
+    "@takumus/cubic-bezier": "^2.0.0"
   }
 }
