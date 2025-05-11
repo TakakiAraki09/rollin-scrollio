@@ -1,9 +1,9 @@
 {
-  "name": "@TakakiAraki09/rollin-scrollio",
+  "name": "@takaki_araki09/rollin-scrollio",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "files": [
     "dist",
@@ -15,9 +15,11 @@
   "license": "ISC",
   "packageManager": "pnpm@10.9.0",
   "scripts": {
+    "changeset": "changeset",
     "format": "biome format --write ./src/**",
     "lint": "biome lint --write ./src/**",
     "check": "biome check --write ./src/**",
+    "ci:publish": "pnpm publish -r",
     "build": "tsup"
   },
   "exports": {
@@ -28,6 +30,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",
+    "@changesets/cli": "^2.29.3",
     "typescript": "^5.8.3"
   },
   "dependencies": {
