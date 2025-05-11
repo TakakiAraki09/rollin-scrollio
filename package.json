@@ -5,6 +5,11 @@
   "types": "./dist/index.d.ts",
   "version": "1.0.0",
   "description": "",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
