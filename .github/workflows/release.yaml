@@ -8,12 +8,13 @@ on:
 env:
   CI: true
 
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+  packages: write
+
 jobs:
-  permissions:
-    contents: write
-    issues: write
-    pull-requests: write
-    packages: write
   version:
     timeout-minutes: 15
     runs-on: ubuntu-latest
