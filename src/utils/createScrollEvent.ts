@@ -1,7 +1,31 @@
 function getScrollProgress(element?: HTMLElement) {
 	if (!element) return 0;
-	const offset = element.offsetTop + window.innerHeight;
+  // TODO: elementのoriginを設定したい。
+  // 現状開始地点はDOMの上部と下部だけ
+  // originTop = 0;
+  // originMiddle = element.scrollHeight / 2;
+  // originBottom = element.scrollHeight;
+  //
+  // elementOffsetHeight = element.offsetTop
+  //
+  // 開始地点：DOMの始点が画面上部に来た時
+	// const offset = element.offsetTop + window.innerHeight;
+
+  // 開始地点：DOMの始点が画面中央部に来た時
+	// const offset = element.offsetTop + window.innerHeight / 2;
+
+  // 開始地点：DOMの始点が画面下部に来た時
+	const offset = element.offsetTop;
+
+  // 終了地点：DOMの終端が画面下部に来た時
 	const max = element.scrollHeight - window.innerHeight;
+
+  // 終了地点：DOMの終端が画面中央に来た時
+	// const max = element.scrollHeight - window.innerHeight / 2;
+
+  // 終了地点：DOMの終端が画面上部に来た時
+	// const max = element.scrollHeight;
+
 	const progress = (window.scrollY + window.innerHeight - offset) / max;
 	return progress;
 }

@@ -1,0 +1,44 @@
+@mixin noramlized($base) {
+  --lorring-scriollio-target-value: calc(#{$base} *
+    calc(
+      (
+        clamp(
+          var(--scriollio-start),
+          var(--lorring-scriollio-progress),
+          var(--scriollio-end)
+        )
+        - var(--scriollio-start)
+      )
+      / (var(--scriollio-end) - var(--scriollio-start))
+    )
+    * var(--scriollio-multiplier, 1.0)
+  );
+}
+
+.lorring-scriollio {
+  position: relative;
+}
+
+[data-lorring-scriollio] {
+  will-change: transform;
+}
+
+
+[data-lorring-scriollio='fade-up'] {
+  @include noramlized(100px);
+  transform: translate3d(0, var(--lorring-scriollio-target-value), 0);
+}
+
+[data-lorring-scriollio='fade-down'] {
+  @include translate3dYFromNormalized(-100px);
+}
+
+[data-lorring-scriollio='fade-left'] {
+  @include translate3dYFromNormalized(-100px);
+}
+
+[data-lorring-scriollio='fade-right'] {
+  @include translate3dYFromNormalized(-100px);
+}
+
+
