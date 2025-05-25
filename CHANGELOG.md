@@ -1,5 +1,11 @@
 # @takaki_araki09/rollin-scrollio
 
+## 0.0.9
+
+### Patch Changes
+
+- 85c2b6e: callback を取得できるように調整
+
 ## 0.0.7
 
 ### Patch Changes
