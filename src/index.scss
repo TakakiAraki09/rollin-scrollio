@@ -30,15 +30,18 @@
 }
 
 [data-lorring-scriollio='fade-down'] {
-  @include translate3dYFromNormalized(-100px);
+  @include noramlized(-100px);
+  transform: translate3d(0, var(--lorring-scriollio-target-value), 0);
 }
 
 [data-lorring-scriollio='fade-left'] {
-  @include translate3dYFromNormalized(-100px);
+  @include noramlized(-100px);
+  transform: translate3d(var(--lorring-scriollio-target-value), 0, 0);
 }
 
 [data-lorring-scriollio='fade-right'] {
-  @include translate3dYFromNormalized(-100px);
+  @include noramlized(100px);
+  transform: translate3d(var(--lorring-scriollio-target-value), 0, 0);
 }
 
 
