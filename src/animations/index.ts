@@ -1,3 +1,2 @@
-// type NotDeclaration = 'getPropertyPriority' | 'getPropertyValue' | 'item' | 'removeProperty' | 'setProperty';
-// type PickCSSType = '';
-// type CSSType = Partial<Omit<CSSStyleDeclaration, NotDeclaration>>;
+// This file is intentionally left empty
+// Animation styles are defined in index.scss

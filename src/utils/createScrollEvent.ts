@@ -40,7 +40,7 @@ export const createScrollEvent = (
 	options?: CreateScrollEventOptions,
 ) => {
 	let isReady = false;
-	const obeserver = new IntersectionObserver(
+	const observer = new IntersectionObserver(
 		(e) => {
 			if (e[0].isIntersecting) {
 				isReady = true;
@@ -53,7 +53,7 @@ export const createScrollEvent = (
 			threshold: options?.threshold ?? 0.1,
 		},
 	);
-	obeserver.observe(wrap);
+	observer.observe(wrap);
 	return (cb?: (progress: number) => void) => {
 		const scrollEffect = () => {
 			if (!isReady) return;

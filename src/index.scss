@@ -1,47 +1,47 @@
-@mixin noramlized($base) {
-  --lorring-scriollio-target-value: calc(#{$base} *
+@mixin normalized($base) {
+  --rolling-scrollio-target-value: calc(#{$base} *
     calc(
       (
         clamp(
-          var(--scriollio-start),
-          var(--lorring-scriollio-progress),
-          var(--scriollio-end)
+          var(--scrollio-start, 0),
+          var(--rolling-scrollio-progress),
+          var(--scrollio-end, 1)
         )
-        - var(--scriollio-start)
+        - var(--scrollio-start, 0)
       )
-      / (var(--scriollio-end) - var(--scriollio-start))
+      / (var(--scrollio-end, 1) - var(--scrollio-start, 0))
     )
-    * var(--scriollio-multiplier, 1.0)
+    * var(--scrollio-multiplier, 1.0)
   );
 }
 
-.lorring-scriollio {
+.rolling-scrollio {
   position: relative;
 }
 
-[data-lorring-scriollio] {
+[data-rolling-scrollio] {
   will-change: transform;
 }
 
 
-[data-lorring-scriollio='fade-up'] {
-  @include noramlized(100px);
-  transform: translate3d(0, var(--lorring-scriollio-target-value), 0);
+[data-rolling-scrollio='fade-up'] {
+  @include normalized(100px);
+  transform: translate3d(0, var(--rolling-scrollio-target-value), 0);
 }
 
-[data-lorring-scriollio='fade-down'] {
-  @include noramlized(-100px);
-  transform: translate3d(0, var(--lorring-scriollio-target-value), 0);
+[data-rolling-scrollio='fade-down'] {
+  @include normalized(-100px);
+  transform: translate3d(0, var(--rolling-scrollio-target-value), 0);
 }
 
-[data-lorring-scriollio='fade-left'] {
-  @include noramlized(-100px);
-  transform: translate3d(var(--lorring-scriollio-target-value), 0, 0);
+[data-rolling-scrollio='fade-left'] {
+  @include normalized(-100px);
+  transform: translate3d(var(--rolling-scrollio-target-value), 0, 0);
 }
 
-[data-lorring-scriollio='fade-right'] {
-  @include noramlized(100px);
-  transform: translate3d(var(--lorring-scriollio-target-value), 0, 0);
+[data-rolling-scrollio='fade-right'] {
+  @include normalized(100px);
+  transform: translate3d(var(--rolling-scrollio-target-value), 0, 0);
 }
 
 
