@@ -1,5 +1,12 @@
 # @takaki_araki09/rollin-scrollio
 
+## 0.0.10
+
+### Patch Changes
+
+- fix: clean up code and fix typos in rolling-scrollio library
+  EOF < /dev/null
+
 ## 0.0.9
 
 ### Patch Changes
